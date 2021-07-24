@@ -3,9 +3,7 @@ package basics;
 import java.util.Scanner;
 
 public class NetAmount {
-
 	public static void main(String[] args) {
-
 		var s = new Scanner(System.in);
 
 		System.out.print("Enter price :");
@@ -22,7 +20,5 @@ public class NetAmount {
 		var net_amount = discounted_amount + tax;
 
 		System.out.printf("Net Amount = %8d",net_amount);
-
 	}
-
 }
