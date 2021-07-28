@@ -6,8 +6,8 @@ public class Account {
 	private String aname;
 	private double balance;
 	
-    // Methods
-	public void open(int no, String name) {
+    // Constructor
+	public Account(int no, String name) {
 		acno = no;
 		aname = name;
 		balance = 0;
@@ -18,5 +18,16 @@ public class Account {
 		System.out.println(aname);
 		System.out.println(balance);
 	}
+	
+	public void deposit(double amount) {
+		balance += amount;
+	}
+	
+	public void withdraw(double amount) {
+		balance -= amount;
+	}
 
+	public double getBalance() {
+		return balance;
+	}
 }
