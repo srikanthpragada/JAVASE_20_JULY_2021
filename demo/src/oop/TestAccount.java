@@ -5,7 +5,7 @@ public class TestAccount {
 	public static void main(String[] args) {
 		 Account a;  // object reference 
 		 
-		 a = new Account(1, "Richards");   
+		 a = new Account(1, "Richards", 50000);   
 		 a.deposit(10000);
 		 a.deposit(5000);
 		 System.out.println(a.getBalance());
@@ -15,6 +15,8 @@ public class TestAccount {
 		 a2.deposit(10000);
 		 a2.print();  
 		 
+		 
+	 
 		 
 		 
 	}

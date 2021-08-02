@@ -13,10 +13,16 @@ public class Account {
 		balance = 0;
 	}
 
+	public Account(int no, String name, double bal) {
+		acno = no;
+		aname = name;
+		balance = bal;
+	}
+	
 	public void print() {
 		System.out.println(acno);
 		System.out.println(aname);
-		System.out.println(balance);
+		System.out.println(balance);	 
 	}
 	
 	public void deposit(double amount) {
