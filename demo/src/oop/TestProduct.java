@@ -3,43 +3,43 @@ package oop;
 class Product {
 	private String name;
 	private int price, qoh;
+	private static int taxrate = 8;
 
-	public Product(String n, int p) {
-		name = n;
-		price = p;
+	public Product(String name, int price) {
+		this.name = name;
+		this.price = price;
 	}
 
-	public Product(String n, int p, int q) {
-		name = n;
-		price = p;
-		qoh = q;
+	public Product(String name, int price, int qoh) {
+		this(name, price); // call another constructor
+		this.qoh = qoh;
 	}
 
 	public void print() {
-		System.out.println(name);
-		System.out.println(price);
-		System.out.println(qoh);
+		System.out.println(this.name);
+		System.out.println(this.price);
+		System.out.println(this.qoh);
 	}
 
 	public void sell(int qty) {
-		qoh -= qty;
+		this.qoh -= qty;
 	}
 
 	public void purchase(int qty) {
-		qoh += qty;
+		this.qoh += qty;
 	}
 
 	public void purchase(int qty, int newprice) {
-		qoh += qty;
-		price = newprice;
+		this.qoh += qty;
+		this.price = newprice;
 	}
 
 	public void setPrice(int p) {
-		price = p;
+		this.price = p;
 	}
 
 	public int getSellingPrice() {
-		return price + (price * 8 / 100);
+		return this.price + (this.price *  Product.taxrate / 100);
 	}
 }
 

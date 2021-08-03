@@ -3,6 +3,8 @@ package oop;
 public class TestAccount {
 
 	public static void main(String[] args) {
+		 System.out.println(Account.getMinBalance());
+		
 		 Account a;  // object reference 
 		 
 		 a = new Account(1, "Richards", 50000);   

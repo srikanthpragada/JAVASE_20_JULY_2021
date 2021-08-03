@@ -6,6 +6,9 @@ public class Account {
 	private String aname;
 	private double balance;
 	
+	// Static variable or class variable 
+	private static int minbal = 5000; 
+	
     // Constructor
 	public Account(int no, String name) {
 		acno = no;
@@ -35,5 +38,9 @@ public class Account {
 
 	public double getBalance() {
 		return balance;
+	}
+	
+	public static int getMinBalance() {
+		return Account.minbal;
 	}
 }
