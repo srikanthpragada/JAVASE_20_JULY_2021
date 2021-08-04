@@ -33,11 +33,12 @@ public class Account {
 	}
 	
 	public void withdraw(double amount) {
-		balance -= amount;
+		if(this.balance - Account.minbal >= amount)
+		      balance -= amount;
 	}
 
 	public double getBalance() {
-		return balance;
+		return this.balance;
 	}
 	
 	public static int getMinBalance() {
