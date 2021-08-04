@@ -3,7 +3,7 @@ package oop;
 class Courses {
 	private static int taxper = 12;
 	private static int[] fees = {5000, 4000, 6000};
-	private static String[] names = { "Java", "Python", "AWS" };
+	private static String[] names = {"Java", "Python", "AWS" };
 
 	public static int getCourseFee(int course) {
 		var fee = Courses.fees[course - 1];
