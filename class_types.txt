@@ -1,0 +1,7 @@
+Class Type	Object Ref.    Object   Inheritance   Keyword
+================================================================
+Normal		    Yes		 Yes	    Yes       No
+Abstract	    Yes		 No	    Yes       abstract
+Final		    Yes          Yes	    No        final
+================================================================
+

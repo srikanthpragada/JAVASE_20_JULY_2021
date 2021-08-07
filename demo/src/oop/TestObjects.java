@@ -1,6 +1,6 @@
 package oop;
 
-class Point {
+abstract class Point {
 	protected int x, y;
 
 	public Point(int x, int y) {
@@ -13,13 +13,16 @@ class Point {
 		System.out.println(this.y);
 	}
 
-	public int getX() {
+	final public int getX() {
 		return this.x;
 	}
 
-	public int getY() {
+	final public int getY() {
 		return this.y;
 	}
+
+	public abstract double area();
+		 
 }
 
 class Circle extends Point {
@@ -67,7 +70,8 @@ class Rect extends Point {
 public class TestObjects {
 
 	public static void printDetails(Point p) {
-		p.print();  // Runtime Polymorphism or DMD or Late binding 
+		p.print();  					// Runtime Polymorphism or DMD or Late binding 
+		System.out.println(p.area());   // Runtime Polymorphism
  	}
 
 	public static void main(String[] args) {
