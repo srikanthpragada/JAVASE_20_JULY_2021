@@ -22,7 +22,7 @@ abstract class Point {
 	}
 
 	public abstract double area();
-		 
+
 }
 
 class Circle extends Point {
@@ -70,16 +70,16 @@ class Rect extends Point {
 public class TestObjects {
 
 	public static void printDetails(Point p) {
-		p.print();  					// Runtime Polymorphism or DMD or Late binding 
-		System.out.println(p.area());   // Runtime Polymorphism
- 	}
+		p.print(); // Runtime Polymorphism or DMD or Late binding
+		System.out.println(p.area()); // Runtime Polymorphism
+	}
 
 	public static void main(String[] args) {
 		Circle c = new Circle(10, 20, 15);
 		printDetails(c);
-		
+
 		Rect r = new Rect(10, 20, 20, 25);
-		printDetails(r);	
+		printDetails(r);
 	}
 
 }
