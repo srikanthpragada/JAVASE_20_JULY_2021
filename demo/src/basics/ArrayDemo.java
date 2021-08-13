@@ -3,7 +3,7 @@ package basics;
 public class ArrayDemo {
 
 	public static void main(String[] args) {
-		var nums = new int[5];
+		var nums = new int[10];
 		
 		for(int i = 0; i < nums.length; i ++)
 			System.out.println(nums[i]);
