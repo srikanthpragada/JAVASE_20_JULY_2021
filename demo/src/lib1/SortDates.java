@@ -1,6 +1,7 @@
 package lib1;
 
 import java.time.LocalDate;
+import java.time.Month;
 import java.time.format.DateTimeFormatter;
 import java.util.Arrays;
 import java.util.Scanner;
@@ -8,6 +9,8 @@ import java.util.Scanner;
 public class SortDates {
 
 	public static void main(String[] args) {
+	  
+		
 		LocalDate[] dates = new LocalDate[5];
 		Scanner s = new Scanner(System.in);
 
@@ -19,8 +22,8 @@ public class SortDates {
 
 		Arrays.sort(dates);
 
-		for (var d : dates)
-			System.out.println(d.format(DateTimeFormatter.ISO_DATE));
+		for (var dd : dates)
+			System.out.println(dd.format(DateTimeFormatter.ISO_DATE));
 
 	}
 
