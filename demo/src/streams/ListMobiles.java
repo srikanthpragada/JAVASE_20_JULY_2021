@@ -7,7 +7,7 @@ import java.util.regex.Pattern;
 public class ListMobiles {
 
 	public static void main(String[] args) throws Exception {
-		Path p = Path.of("c:\\classroom\\oct8\\mobiles.txt");
+		Path p = Path.of("d:\\classroom\\mobiles.txt");
 
 //		Files.lines(p)
 //		     .filter(ListMobiles::isMobile) // Method reference 
@@ -15,13 +15,12 @@ public class ListMobiles {
 		
 		Files.lines(p)
 	     .filter(v -> isMobile(v))
-	     //  .forEach(System.out::println);
-	     .forEach(v -> System.out.println("+91" + v));
-
+	     .sorted()
+	     .forEach(System.out::println);
 	}
 
 	public static boolean isMobile(String s) {
-		return Pattern.matches("\\d+", s);
+		return Pattern.matches("\\d{10}", s);
 	}
 
 }
