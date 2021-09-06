@@ -7,13 +7,12 @@ import java.util.regex.Pattern;
 public class ListJavaFiles {
 
 	public static void main(String[] args) throws Exception {
-		Path p = Path.of("c:\\classroom\\oct8");
+		Path p = Path.of("d:\\classroom\\july20");
 		
 		Files.walk(p)
 		     .filter(f -> f.toString().endsWith(".java"))
-		     .filter(f -> f.toString().contains("List"))
+		     // .filter(f -> f.toString().contains("List"))
 		     .forEach(System.out::println);
-
 	}
 	
 //	public static boolean isJavaFile(Path p) {

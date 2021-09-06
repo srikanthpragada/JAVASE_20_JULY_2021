@@ -16,7 +16,8 @@ public class PriceCalculator extends JFrame {
 		Container c = getContentPane();
 		c.setLayout(new GridLayout(4, 1));
 
-		cmbModels = new JComboBox<String>(new String[] { "Compaq Presario", "Dell Insipiron", "Hp Pavilion" });
+		cmbModels = new JComboBox<String>
+		    (new String[] { "Compaq Presario", "Dell Insipiron", "Hp Pavilion" });
 
 		rbCash = new JRadioButton("Cash", true);
 		rbCredit = new JRadioButton("Credit");

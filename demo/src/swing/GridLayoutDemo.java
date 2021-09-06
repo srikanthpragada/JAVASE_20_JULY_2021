@@ -7,7 +7,7 @@ public class GridLayoutDemo extends javax.swing.JFrame {
     public GridLayoutDemo() {
       super("GridLayout Demo");
       Container c = getContentPane();
-      c.setLayout( new GridLayout(0,3));
+      c.setLayout( new GridLayout(5,0));
       
       for(int i = 1; i <= 10; i ++)
     	  c.add( new JButton("Button" + i));

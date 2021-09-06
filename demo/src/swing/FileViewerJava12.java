@@ -23,7 +23,7 @@ public class FileViewerJava12 extends JFrame {
 	public FileViewerJava12() {
 		super("File Viewer 1.0");
 		tfFilename = new JTextField(20);
-		taContents = new JTextArea(); // Multiline textbox
+		taContents = new JTextArea();  // Multiline textbox
 		taContents.setEditable(false); // readonly
 
 		JScrollPane sp = new JScrollPane(taContents,
@@ -66,7 +66,7 @@ public class FileViewerJava12 extends JFrame {
 	private void openFile() {
 		try {
 			Path path = Path.of(tfFilename.getText());
-			// Java 12 readString(Path) of Files
+			// Java 11 readString(Path) of Files
 			taContents.setText(Files.readString(path));
 		} catch (Exception ex) {
 			taContents.setText("Error ->" + ex.getMessage());
